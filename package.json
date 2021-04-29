@@ -2,10 +2,10 @@
   "name": "info474assignment2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "start": "parcel index.html",
-    
+    "build": "parcel build index.html --public-url https://carolwang820.github.io/INFO474Assignment2/; rm -rf docs; mv dist docs;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carol Wang",
