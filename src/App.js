@@ -8,15 +8,16 @@ const App = () => {
     const [data, loading] = useFetch(
         "https://raw.githubusercontent.com/CarolWang820/INFO474Assignment2/main/accessories.csv"
     );
-    console.log(data);
 
+    //console.log("from hook", loading, data);
+    
     const MaxextentScore = extent(data, (d) => {
-        return +d.TMAX;
+        return +d.Sell;
     });
 
 
 
-    const size = 500;
+    const size = 550;
     const margin = 20;
 
     const yScale = scaleLinear()
@@ -32,12 +33,12 @@ const App = () => {
 
         <svg width={size} height={size} style={{border: "1px solid black"}}>
             {data.map((measurement, index) => {
-                console.log(measurement.TMAX);
+                console.log('draw circle')
                 return (
                     <circle
                         key={index}
                         cx={size / 2}
-                        cy={size - margin}
+                        cy={measurement.Sell}
                         r = "3"
                         fill="none"
                         stroke={"steelblue"}
