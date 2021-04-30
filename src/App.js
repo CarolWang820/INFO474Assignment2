@@ -13,7 +13,7 @@ const App = () => {
     const sample = data.slice(0, 300);
     
     const MaxextentScore = extent(data, (d) => {
-        return +d.JP_Sales;
+        return +d.Global_Sales;
     });
 
 
@@ -171,20 +171,42 @@ const App = () => {
             >0
             </text>
 
-            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 99} 
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 412} 
             style={{fontSize: 10, fontFamily: "italic"}}
-            >10.22
+            >41.49
             </text>
 
             <line
-            x1={size / 2 - 18} y1={size - margin - 102}
-            x2={size / 2 - 13} y2={size - margin - 102}
+            x1={size / 2 - 18} y1={size - margin - 415}
+            x2={size / 2 - 13} y2={size - margin - 415}
             stroke={"black"}
             />
 
             <line
             x1={size / 2 - 18} y1={size - 20}
             x2={size / 2 - 13} y2={size - 20}
+            stroke={"black"}
+            />
+
+            <text x={size / 2 + 52} textAnchor="end" y={size - margin - 1} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0.3
+            </text>
+
+            <text x={size / 2 + 57} textAnchor="end" y={size - margin - 110} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >11.32
+            </text>
+
+            <line
+            x1={size / 2 +28} y1={size - margin - 6}
+            x2={size / 2 +33} y2={size - margin - 6}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 + 28} y1={margin + 346}
+            x2={size / 2 + 33} y2={margin + 346}
             stroke={"black"}
             />
 
@@ -209,14 +231,49 @@ const App = () => {
         <h4>2.2 ps2</h4>
 
         <svg width={size} height={size} style={{border: "1px solid black"}}>
-            <text 
-                x={size / 2 - 20} 
-                textAnchor="end" 
-                y={size - 143} 
-                style={{fontSize: 10, fontFamily: "Gill Sans, san serif"}}
-            >
-                2.5
+        <text x={size / 2 - 20} textAnchor="end" y={size - margin +3} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0
             </text>
+
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 461} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >41.49
+            </text>
+
+            <line
+            x1={size / 2 - 18} y1={size - margin - 465}
+            x2={size / 2 - 13} y2={size - margin - 465}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 - 18} y1={size - 20}
+            x2={size / 2 - 13} y2={size - 20}
+            stroke={"black"}
+            />
+
+            <text x={size / 2 + 52} textAnchor="end" y={size - margin + 2} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0.1
+            </text>
+
+            <text x={size / 2 + 57} textAnchor="end" y={size - margin - 185} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >17.52
+            </text>
+
+            <line
+            x1={size / 2 +28} y1={size - margin - 188}
+            x2={size / 2 +33} y2={size - margin - 188}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 + 28} y1={size - margin -1}
+            x2={size / 2 + 33} y2={size - margin -1}
+            stroke={"black"}
+            />
             
             {sample.map((measurement, index) => {
                 const highlight = measurement["Platform"] === "PS2";
@@ -236,41 +293,55 @@ const App = () => {
         </svg>
 
 
-        <h4>2.3 ps3</h4>
-
-        <svg width={size} height={size} style={{border: "1px solid black"}}>
-            <text 
-                x={size / 2 - 20} 
-                textAnchor="end" 
-                y={size - 143} 
-                style={{fontSize: 10, fontFamily: "Gill Sans, san serif"}}
-            >
-                2.5
-            </text>
-            
-            {sample.map((measurement, index) => {
-                const highlight = measurement["Platform"] === "PS3";
-                console.log('draw circle')
-                return (
-                    <circle
-                        key={index}
-                        cx={highlight ? size / 2 + 20 : size / 2}
-                        cy={size - margin - measurement.NA_Sales * 15}
-                        r = "3"
-                        fill="none"
-                        stroke={highlight ? "red" : "steelblue"} 
-                        strokeOpacity="0.3"
-                    />
-                );
-            })}
-        </svg>
-
 
         <h3>3. genre on eu</h3>
         <h4>3.1 sports</h4>
 
         <svg width={size} height={size} style={{border: "1px solid black"}}>
             
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin +3} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0
+            </text>
+
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 318} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >29.02
+            </text>
+
+            <line
+            x1={size / 2 - 18} y1={size - margin - 322}
+            x2={size / 2 - 13} y2={size - margin - 322}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 - 18} y1={size - 20}
+            x2={size / 2 - 13} y2={size - 20}
+            stroke={"black"}
+            />
+
+            <text x={size / 2 + 52} textAnchor="end" y={size - margin - 2} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >1.2
+            </text>
+
+            <text x={size / 2 + 61} textAnchor="end" y={size - margin - 272} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >26.84
+            </text>
+
+            <line
+            x1={size / 2 +28} y1={size - margin - 275}
+            x2={size / 2 +33} y2={size - margin - 275}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 + 28} y1={size - margin -5}
+            x2={size / 2 + 33} y2={size - margin -5}
+            stroke={"black"}
+            />
 
             {sample.map((measurement, index) => {
                 const highlight = measurement["Genre"] === "Sports";
@@ -279,7 +350,7 @@ const App = () => {
                     <circle
                         key={index}
                         cx={highlight ? size / 2 + 20 : size / 2}
-                        cy={size - margin - measurement.NA_Sales * 15}
+                        cy={size - margin - measurement.EU_Sales * 25}
                         r = "3"
                         fill="none"
                         stroke={highlight ? "red" : "steelblue"} 
@@ -293,15 +364,58 @@ const App = () => {
         <h4>3.2 Platform</h4>
         <svg width={size} height={size} style={{border: "1px solid black"}}>
             
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin +3} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0
+            </text>
+
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 99} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >10.22
+            </text>
+
+            <line
+            x1={size / 2 - 18} y1={size - margin - 102}
+            x2={size / 2 - 13} y2={size - margin - 102}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 - 18} y1={size - 20}
+            x2={size / 2 - 13} y2={size - 20}
+            stroke={"black"}
+            />
+
+            <text x={size / 2 + 43} textAnchor="end" y={size - margin + 3.5} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0
+            </text>
+
+            <text x={size / 2 + 57} textAnchor="end" y={size - margin - 35} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >4.54
+            </text>
+
+            <line
+            x1={size / 2 +28} y1={size - margin }
+            x2={size / 2 +33} y2={size - margin }
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 + 28} y1={margin + 422}
+            x2={size / 2 + 33} y2={margin + 422}
+            stroke={"black"}
+            />
 
             {sample.map((measurement, index) => {
-                const highlight = measurement["Genre"] === "Platform";
+                const highlight = measurement["Genre"] === "Sports";
                 console.log('draw circle')
                 return (
                     <circle
                         key={index}
                         cx={highlight ? size / 2 + 20 : size / 2}
-                        cy={size - margin - measurement.NA_Sales * 15}
+                        cy={size - margin - measurement.JP_Sales * 10}
                         r = "3"
                         fill="none"
                         stroke={highlight ? "red" : "steelblue"} 
@@ -310,18 +424,64 @@ const App = () => {
                 );
             })}
         </svg>
-        <h4>3.3 racing</h4>
+    
+        <h3>4. Year</h3>
+        <h4>4.1 sports</h4>
+
         <svg width={size} height={size} style={{border: "1px solid black"}}>
-            
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 36} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >0
+            </text>
+
+            <text x={size / 2 - 20} textAnchor="end" y={size - margin - 400} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >82.74
+            </text>
+
+            <line
+            x1={size / 2 - 18} y1={size - margin - 403}
+            x2={size / 2 - 13} y2={size - margin - 403}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 - 18} y1={size - 60}
+            x2={size / 2 - 13} y2={size - 60}
+            stroke={"black"}
+            />
+
+            <text x={size / 2 + 50} textAnchor="end" y={size - margin - 38} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >1.2
+            </text>
+
+            <text x={size / 2 + 61} textAnchor="end" y={size - margin - 158} 
+            style={{fontSize: 10, fontFamily: "italic"}}
+            >32.78
+            </text>
+
+            <line
+            x1={size / 2 +28} y1={size - margin - 162}
+            x2={size / 2 +33} y2={size - margin - 162}
+            stroke={"black"}
+            />
+
+            <line
+            x1={size / 2 + 28} y1={size - margin -41}
+            x2={size / 2 + 33} y2={size - margin -41}
+            stroke={"black"}
+            />
 
             {sample.map((measurement, index) => {
-                const highlight = measurement["Genre"] === "Racing";
+
+                const highlight = measurement["Year"] === "2002";
                 console.log('draw circle')
                 return (
                     <circle
                         key={index}
                         cx={highlight ? size / 2 + 20 : size / 2}
-                        cy={size - margin - measurement.NA_Sales * 15}
+                        cy={size - margin - measurement.Global_Sales * 10}
                         r = "3"
                         fill="none"
                         stroke={highlight ? "red" : "steelblue"} 
@@ -330,7 +490,6 @@ const App = () => {
                 );
             })}
         </svg>
-
 
 
 
