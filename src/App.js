@@ -1,7 +1,7 @@
 import React from "react";
 import { useFetch } from "./hooks/useFetch";
 import { scaleLinear}  from "d3-scale";
-import { map, extent, max, min, bin } from "d3-array";
+import { extent, max, min, bin } from "d3-array";
 
 
 const App = () => {
@@ -10,10 +10,13 @@ const App = () => {
     );
     
     console.log(data);
+
     const MaxextentScore = extent(data, (d) => {
         return +d.TMAX;
     });
- 
+
+
+
     const size = 500;
     const margin = 20;
 
@@ -29,7 +32,8 @@ const App = () => {
         <h3>Distribution of Population Dentisy for All Countries</h3>
 
         <svg width={size} height={size} style={{border: "1px solid black"}}>
-            {data.map((measurement, index) => {
+            {data.slice(25,50).map((measurement, index) => {
+                console.log(measurement.TMAX);
                 return (
                     <circle
                         key={index}
