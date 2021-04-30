@@ -6,9 +6,8 @@ import { extent, max, min, bin } from "d3-array";
 
 const App = () => {
     const [data, loading] = useFetch(
-        "https://raw.githubusercontent.com/CarolWang820/INFO474Assignment2/main/countries-of-the-world.csv"
+        "https://raw.githubusercontent.com/CarolWang820/INFO474Assignment2/main/accessories.csv"
     );
-    
     console.log(data);
 
     const MaxextentScore = extent(data, (d) => {
@@ -32,13 +31,13 @@ const App = () => {
         <h3>Distribution of Population Dentisy for All Countries</h3>
 
         <svg width={size} height={size} style={{border: "1px solid black"}}>
-            {data.slice(25,50).map((measurement, index) => {
+            {data.map((measurement, index) => {
                 console.log(measurement.TMAX);
                 return (
                     <circle
                         key={index}
                         cx={size / 2}
-                        cy={size - margin - measurement.TMAX}
+                        cy={size - margin}
                         r = "3"
                         fill="none"
                         stroke={"steelblue"}
